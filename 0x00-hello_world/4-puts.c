@@ -1,14 +1,8 @@
-/**
- *File_name:4-puts.c
- *Author:Enock Yator
- *Decription:Print exactly "Programming is like building a multilingual puzzle
- */
-
 #include <stdio.h>
 
 /**
  *main - main block
- *Rturn:0
+ *Return:0
  */
 int main(void)
 {
