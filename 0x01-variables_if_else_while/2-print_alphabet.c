@@ -15,6 +15,7 @@ int main(void)
 	{
 		x = tolower(i);
 		putchar(x);
+		putchar('\n');
 	}
 	return (0);
 }
