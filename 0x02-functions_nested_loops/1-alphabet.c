@@ -1,16 +1,8 @@
 #include "main.h"
 
 /**
- *main - calls the function
- *Return:0
-*/
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-/**
  *print_alphabet - Prints alphabets in lowercase
+ *Return:void
  */
 void print_alphabet(void)
 {
