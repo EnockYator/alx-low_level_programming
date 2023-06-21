@@ -7,8 +7,18 @@
  *Return:0
  */
 
-int print_last_digit(int dig, int num)
+int print_last_digit(int num)
 {
-	dig = num % 10;
+	int dig;
+
+	if (num < 0)
+	{
+		dig = -1 * (num % 10);
+	}
+	else
+	{
+		dig = num % 10;
+	}
+	
 	return (dig);
 }
