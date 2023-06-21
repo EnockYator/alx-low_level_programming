@@ -21,5 +21,4 @@ int print_last_digit(int num)
 		dig = num % 10;
 		_putchar(dig + '0');
 	}
-	return (dig + '0');
 }
