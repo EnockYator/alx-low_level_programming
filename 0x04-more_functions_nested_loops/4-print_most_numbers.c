@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *print_most_numbers - Prints 0 to 9 except 2 and 4
- *Return:0
+ * print_most_numbers -  checks for checks for a digit (0 through 9).
+ *
+ * Return: Always 0.
  */
 
 void print_most_numbers(void)
@@ -16,5 +17,6 @@ void print_most_numbers(void)
 		_putchar(i + '0');
 		}
 	}
+
 	_putchar('\n');
 }
