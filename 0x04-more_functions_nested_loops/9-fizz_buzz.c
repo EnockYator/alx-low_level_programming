@@ -29,6 +29,7 @@ int main(void)
 		}
 		else if ((num % 3 == 0) && (num % 5 == 0))
 		{
+			_putchar(' ');
 			_putchar('F');
 			_putchar('i');
 			_putchar('z');
@@ -41,7 +42,11 @@ int main(void)
 		else
 		{
 			_putchar(num + '0');
-		};
+			if (num != 100)
+			{
+				_putchar(' ');
+			}
+		}
 	}
 	_putchar('\n');
 	return (0);
