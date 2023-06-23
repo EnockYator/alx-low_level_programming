@@ -9,45 +9,30 @@
 
 int main(void)
 {
-	int num;
+	int x;
 
-	for (num = 1; num <= 100; num++)
+	for (x = 1; x <= 100; x++)
 	{
-		if (num % 3 == 0)
+		if (x % 3 == 0 || x % 5 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-		}
-		else if (num % 5 == 0)
-		{
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
-		}
-		else if ((num % 3 == 0) && (num % 5 == 0))
-		{
-			_putchar(' ');
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
+			if (x % 3 == 0)
+			{
+				printf("Fizz");
+			}
+			if (x % 5 == 0)
+			{
+				printf("Buzz");
+			}
 		}
 		else
 		{
-			_putchar(num + '0');
-			if (num != 100)
-			{
-				_putchar(' ');
-			}
+			printf("%d", x);
+		}
+		if (x != 100)
+		{
+			putchar(' ');
 		}
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
