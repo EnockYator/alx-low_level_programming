@@ -1,0 +1,12 @@
+#include "main.h"
+
+/**
+ *print_chessboard - Prints chessboard
+ *@a: The character
+ *Return: Nothing
+ */
+
+void print_chessboard(char (*a)[8])
+{
+
+}
