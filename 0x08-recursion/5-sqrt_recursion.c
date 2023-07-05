@@ -8,42 +8,25 @@
 
 int _sqrt_recursion(int n)
 {
-if (n < 0)
-{
-return (-1);
-}
-else
-return (_sqrt_helper(n, 0, n));
+	return (sqrt_a(n, 0));
 }
 
 /**
- *_sqrt_helper - Helps to deduce the square root
+ *_sqrt_a - Helps to deduce the square root
  *@n: The number
- *@start: Starting point
- *@end: Ending point in finding square root
- *Return: Multiple return values
+ *@p: The power
+ *Return: Square root
  */
 
-int _sqrt_helper(int n, int start, int end)
+int _sqrt_a(int n, int p)
 {
-if (start > end)
-{
-return (-1);
-}
-
-int mid = start + (end - start) / 2;
-int square = mid * mid;
-
-if (square == n)
-{
-return (mid);
-}
-else if (square < n)
-{
-return (_sqrt_helper(n, (mid + 1), end));
-}
-else
-{
-return (_sqrt_helper(n, start, (mid - 1)));
-}
+	if (p * p == n)
+	{
+		return (p);
+	}
+	else if (p * p > a)
+	{
+		return (-1);
+	}
+	return (sqrt_a(a, p + 1));
 }
