@@ -6,26 +6,29 @@
  *a spefic char
  *@size: Size of the memory
  *@c: Char in the array
- *Return: NULL if size = 0,NULL if it fails
+ *Return: NULL if size = 0 or if it fails,pointer to the array on success
  */
 
 char *create_array(unsigned int size, char c)
 {
-int i;
+unsigned int i;
 char *arr = (char *)malloc(size * sizeof(char));
 
-if (size == 0)
-{  
-return (NULL);
-}
 if (arr == NULL)
 {
 return (NULL);
 }
 
+if (size == 0)
+{
+return (NULL);
+}
+else
+{
 for (i = 0; i < size; i++)
 {
 arr[i] = c;
-_putchar(arr);
+return (arr);
+}
 }
 }
