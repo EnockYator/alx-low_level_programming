@@ -43,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 		new_mem[i] = s2[0];
 		s2++;
 	}
-	new_mem[i] = '\0';
+	new_mem[i++] = '\0';
 
 	return (new_mem);
 }
