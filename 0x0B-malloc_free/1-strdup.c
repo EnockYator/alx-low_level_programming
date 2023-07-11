@@ -16,6 +16,7 @@ char *_strdup(char *str)
 	intptr_t i = (intptr_t)str;
 	intptr_t j;
 	int size;
+	char *mem;
 
 	if (*str != '\0')
 	{
@@ -24,7 +25,7 @@ char *_strdup(char *str)
 		size = ((j - i) + 1);
 	}
 
-	char *mem = (char *)malloc(size * (sizeof(char)));
+	mem = (char *)malloc(size * (sizeof(char)));
 
 	if (mem == NULL)
 		return (NULL);
