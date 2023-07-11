@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdint.h>
 #include <stdlib.h>
 
 /**
@@ -13,37 +12,25 @@
 
 char *_strdup(char *str)
 {
-	intptr_t i = (intptr_t)str;
-	intptr_t j;
-	int size;
+	int x;
+	int length = 0;
 	char *mem;
 
-	if (*str != '\0')
+	if (str == NULL)
+		return (NULL);
+
+	while (str[length] != '\0')
 	{
-		j = (intptr_t)str;
-		++str;
-		size = ((j - i) + 1);
+		length++;
 	}
 
-	mem = (char *)malloc(size * (sizeof(char)));
+	mem = (char *)malloc(length * (sizeof(char)));
 
 	if (mem == NULL)
 		return (NULL);
-	mem = str;
+	for (x = 0; x < length; x++)
+	{
+		mem[x] = str[x];
+	}
 	return (mem);
-}
-
-int main(void)
-{
-    char *s;
-
-    s = _strdup("ALX SE");
-    if (s == NULL)
-    {
-        printf("failed to allocate memory\n");
-        return (1);
-    }
-    printf("%s\n", s);
-    free(s);
-    return (0);
 }
