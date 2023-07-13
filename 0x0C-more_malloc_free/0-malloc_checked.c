@@ -15,7 +15,6 @@ void *malloc_checked(unsigned int b)
 
 	if (mem == NULL)
 	{
-		fprintf(stderr, "Malloc failed,Terminating with status 98.\n");
 		exit(98);
 	}
 
