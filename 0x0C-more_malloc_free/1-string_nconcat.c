@@ -1,5 +1,33 @@
 #include "main.h"
 #include <stdlib.h>
+
+/**
+ *_strlen - Finds the length of string
+ *@s: First string
+ *@ss: Second string
+ *Return: Length of the string
+ */
+
+int _strlen(char *s, char *ss)
+{
+	unsigned int str1;
+	unsigned int str2;
+	unsigned int ls = 0;
+	unsigned int lss = 0;
+
+	while (s[ls] != '\0')
+	{
+		ls++;
+		str1 = ls;
+	}
+	while (ss[lss] != '\0')
+	{
+		lss++;
+		str2 = lss;
+	}
+	return (str1);
+	return (str2);
+}
 /**
  *string_nconcat - Concatenates two strings
  *@s1: First string
@@ -16,22 +44,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	while (s1[l1] != '\0')
-	{
-		l1++;
-	}
-	while (s2[l2] != '\0')
-	{
-		l2++;
-	}
-	_mem = malloc(sizeof(*_mem) * (l1 + l2 + 1));
-	if (_mem == NULL)
-		return (NULL);
-	for (i = 0; i < l1; i++)
-		_mem[i] = s1[i];
+	l1 = _strlen(s1, s2);
+	l2 = _strlen(s1, s2);
 	if (n < l2)
 	{
-		for (j = 0; j < n; j++)
+		l2 = n;
+		_mem = malloc(sizeof(*_mem) * (l1 + n + 2));
+
+		if (_mem == NULL)
+			return (NULL);
+		for (i = 0; i < l1; i++)
+			_mem[i] = s1[i];
+		for (j = 0; j < l2; j++)
 		{
 			_mem[i] = s2[j];
 			i++;
@@ -39,6 +63,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{
+		_mem = malloc(sizeof(*_mem) * (l1 + l2 + 1));
+		for (i = 0; i < l1; i++)
+			_mem[i] = s1[i];
 		for (j = 0; j < l2; j++)
 		{
 			_mem[i] = s2[j];
