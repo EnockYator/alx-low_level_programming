@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 {
 	int cLoop, byteNumber;
 	char *ptrMain = (char *)main;
+
 	if (argc != 2)
 	{
 		puts("Error");
