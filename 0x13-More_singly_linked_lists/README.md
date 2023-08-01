@@ -43,17 +43,16 @@ Please use this data structure for this project:
 
 ````c
 /**
- * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
+ * struct listint_s - singly linked list
+ * @n: Integer
  * @next: points to the next node
  *
  * Description: singly linked list node structure
  */
-typedef struct list_s
+typedef struct listint_s
 {
-    char *str;
+    int n;
     unsigned int len;
-    struct list_s *next;
-} list_t;
+    struct listint_s *next;
+} listint_s;
 ````
